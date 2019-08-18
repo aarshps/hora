@@ -1,0 +1,14 @@
+D:\aarshps\Source\Hora\Hora.Sv\Hora\Hora\bin\Debug\netcoreapp2.1\Hora.deps.json
+D:\aarshps\Source\Hora\Hora.Sv\Hora\Hora\bin\Debug\netcoreapp2.1\Hora.runtimeconfig.json
+D:\aarshps\Source\Hora\Hora.Sv\Hora\Hora\bin\Debug\netcoreapp2.1\Hora.runtimeconfig.dev.json
+D:\aarshps\Source\Hora\Hora.Sv\Hora\Hora\bin\Debug\netcoreapp2.1\Hora.dll
+D:\aarshps\Source\Hora\Hora.Sv\Hora\Hora\bin\Debug\netcoreapp2.1\Hora.pdb
+D:\aarshps\Source\Hora\Hora.Sv\Hora\Hora\obj\Debug\netcoreapp2.1\Hora.csprojAssemblyReference.cache
+D:\aarshps\Source\Hora\Hora.Sv\Hora\Hora\obj\Debug\netcoreapp2.1\Hora.csproj.CoreCompileInputs.cache
+D:\aarshps\Source\Hora\Hora.Sv\Hora\Hora\obj\Debug\netcoreapp2.1\Hora.RazorAssemblyInfo.cache
+D:\aarshps\Source\Hora\Hora.Sv\Hora\Hora\obj\Debug\netcoreapp2.1\Hora.RazorAssemblyInfo.cs
+D:\aarshps\Source\Hora\Hora.Sv\Hora\Hora\obj\Debug\netcoreapp2.1\Hora.AssemblyInfoInputs.cache
+D:\aarshps\Source\Hora\Hora.Sv\Hora\Hora\obj\Debug\netcoreapp2.1\Hora.AssemblyInfo.cs
+D:\aarshps\Source\Hora\Hora.Sv\Hora\Hora\obj\Debug\netcoreapp2.1\Hora.RazorTargetAssemblyInfo.cache
+D:\aarshps\Source\Hora\Hora.Sv\Hora\Hora\obj\Debug\netcoreapp2.1\Hora.dll
+D:\aarshps\Source\Hora\Hora.Sv\Hora\Hora\obj\Debug\netcoreapp2.1\Hora.pdb
