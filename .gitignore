@@ -3,5 +3,6 @@
 ################################################################################
 
 /Hora.Sv/Hora/.vs
-/Hora.Sv/Hora/Hora/bin
-/Hora.Sv/Hora/Hora/obj
+/Hora.Sv/Hora/Hora.Web/bin
+/Hora.Sv/Hora/Hora.Web/obj
+/.vs
