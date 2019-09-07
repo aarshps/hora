@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Hora.Sv/Hora/.vs
+/Hora.Sv/Hora/Hora/bin
+/Hora.Sv/Hora/Hora/obj
