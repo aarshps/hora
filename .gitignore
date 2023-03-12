@@ -1,2 +1,4 @@
+# Ignoring python cache folder
 __pycache__/
-horaenv/
+# Ignoring all venvs that probably would only get created with a hora prefix
+hora*/

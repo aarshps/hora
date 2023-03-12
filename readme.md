@@ -3,9 +3,8 @@ hora
 - what does it do?
     - nothing
 
-depends on
+Pre-requisites
 ---
-- Flask-2.2.3
-- python-dotenv-1.0.0
-- pylint-2.17.0
-- pip-23.0.1
+- Change python interpretor to use the venv
+- Install all the dependencies using the requirements.txt
+    - ```pip install -r requirements.txt```
