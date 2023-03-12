@@ -1,10 +1,2 @@
-﻿################################################################################
-# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
-################################################################################
-
-/Hora.Sv/Hora/.vs
-/Hora.Sv/Hora/Hora.Web/bin
-/Hora.Sv/Hora/Hora.Web/obj
-/.vs
-/Hora.Sv/Hora/Hora.Db.Ef/bin
-/Hora.Sv/Hora/Hora.Db.Ef/obj
+__pycache__/
+horaenv/
