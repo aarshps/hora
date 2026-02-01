@@ -26,6 +26,6 @@ Thumbs.db
 
 # Secrets
 appsettings.Secrets.json
-.env
+.env*
 *.pem
 *.key
