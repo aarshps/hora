@@ -2,10 +2,10 @@
 using Hora.Db.Ef.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 
 namespace Hora
 {
@@ -24,7 +24,7 @@ namespace Hora
             services.AddDbContextPool<HoraDbContext>(options => 
                 options.UseSqlServer(config.GetConnectionString("HoraDbConnection")));
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddControllers().AddNewtonsoftJson();
 
             services.AddCors(o => o.AddPolicy("HoraPolicy", builder =>
             {
@@ -32,16 +32,13 @@ namespace Hora
                     .AllowAnyOrigin()
                     .AllowAnyMethod()
                     .AllowAnyHeader();
-                // Note: AllowCredentials() is not compatible with AllowAnyOrigin() in most browsers.
             }));
 
             services.AddScoped<ITimeRepository, TimeRepository>();
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            app.UseCors("HoraPolicy");
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -52,7 +49,13 @@ namespace Hora
             }
 
             app.UseHttpsRedirection();
-            app.UseMvc();
+            app.UseRouting();
+            app.UseCors("HoraPolicy");
+            
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
         }
     }
 }

@@ -9,7 +9,15 @@ const httpOptions = {
 export class AppService {
     constructor(private http: HttpClient) { }
 
-    getTime() {
-        return this.http.get('https://localhost:44383/api/time');
+    getServerTime() {
+        return this.http.get('/api/time/server');
+    }
+
+    getHistory() {
+        return this.http.get<any[]>('/api/time');
+    }
+
+    saveTime(time: { Start: string }) {
+        return this.http.post('/api/time', time, httpOptions);
     }
 }
