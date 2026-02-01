@@ -28,17 +28,26 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
+    - name: Setup .NET Core 2.1
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '2.1.x'
+
     - name: Initialize CodeQL
       uses: github/codeql-action/init@v3
       with:
         languages: ${{ matrix.language }}
-        # If you wish to specify custom queries, you can do so here or in a config file.
-        # By default, queries listed here will run in addition to the default device builtin queries.
-        # queries: ./path/to/local/query, your-org/your-repo/queries@main
 
-    # Autobuild attempts to build any compiled languages  (C#, C++, or Java).
-    # If this step fails, you can remove it and replace it with your own custom build steps.
-    - name: Autobuild
+    # Manual build for C# since Autobuild fails on older .NET Core versions
+    - name: Build C#
+      if: matrix.language == 'csharp'
+      run: |
+        dotnet restore Hora.Sv/Hora/Hora.sln
+        dotnet build Hora.Sv/Hora/Hora.sln --configuration Release
+
+    # Autobuild works fine for JavaScript
+    - name: Autobuild JS
+      if: matrix.language == 'javascript'
       uses: github/codeql-action/autobuild@v3
 
     - name: Perform CodeQL Analysis
