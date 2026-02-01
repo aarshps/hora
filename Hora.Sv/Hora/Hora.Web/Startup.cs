@@ -31,8 +31,8 @@ namespace Hora
                 builder
                     .AllowAnyOrigin()
                     .AllowAnyMethod()
-                    .AllowAnyHeader()
-                    .AllowCredentials();
+                    .AllowAnyHeader();
+                // Note: AllowCredentials() is not compatible with AllowAnyOrigin() in most browsers.
             }));
 
             services.AddScoped<ITimeRepository, TimeRepository>();
